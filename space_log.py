@@ -4,6 +4,7 @@
 
 from sys import argv
 import fuel
+import re
 
 # Opens the log file and grabs the contents.
 try:
@@ -17,7 +18,14 @@ except:
 
 # Uncomment and your work in the appropriate spots.
 argSwitcher = {
-#	'-s': NAMES OF SYSTEMS VISITED
+	'-s': #NAMES OF SYSTEMS VISITED
+        pattern = re.compile(r'["]event["][:"]FSDJump[",] ["]StarSystem[":"](\w+)["]')  
+    
+        matches = pattern.finditer(content)
+    
+        for match in matches:
+            print(match.group(1))
+        
 #	'-p': NAMES OF PLANETS SCANNED
 #	'-t': TOTAL NUMBER OF TERRAFORMABLE PLANETS SCANNED
 #	'-d': TOTAL DISTANCE IN LIGHT YEARS
@@ -29,4 +37,4 @@ try:
 except IndexError:
 	exit("Missing search argument.")
 
-print(func(content))
+print(func(content))    
