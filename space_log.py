@@ -17,10 +17,10 @@ except:
 
 # Uncomment and your work in the appropriate spots.
 def Names_of_system_visted(content):
-    pattern = re.compile(r"\"event\"\:\"FSDJump\"\, \"StarSystem\"\:\".+\"")  
+    pattern = re.compile(r"\"event\":\"FSDJump\", \"StarSystem\":\"(\w+\s\w+[-\s]\w+[-\s]\w+[-\s\w]\"?\w?\w?\w?\w?\s?\w?-?\w?-?\w?\w?\"?)")  
     matches = pattern.finditer(content)
     for match in matches:
-        print(match)
+        print(match.group(1))
         
 argSwitcher = {
 	'-s': Names_of_system_visted, #NAMES OF SYSTEMS VISITED        
@@ -36,3 +36,4 @@ except IndexError:
 	exit("Missing search argument.")
 
 print(func(content))    
+
