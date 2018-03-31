@@ -3,8 +3,7 @@
 # Use like `./space_log.py -s|-p|-t|-d|-f log_file
 
 from sys import argv
-import fuel
-import re
+import fuel, re
 
 # Opens the log file and grabs the contents.
 try:
@@ -17,15 +16,14 @@ except:
 	exit("Couldn't open file \""+sys.argv[1]+"\".")
 
 # Uncomment and your work in the appropriate spots.
-argSwitcher = {
-	'-s': #NAMES OF SYSTEMS VISITED
-        pattern = re.compile(r'["]event["][:"]FSDJump[",] ["]StarSystem[":"](\w+)["]')  
-    
-        matches = pattern.finditer(content)
-    
-        for match in matches:
-            print(match.group(1))
+def Names_of_system_visted(content):
+    pattern = re.compile(r"\"event\"\:\"FSDJump\"\, \"StarSystem\"\:\".+\"")  
+    matches = pattern.finditer(content)
+    for match in matches:
+        print(match)
         
+argSwitcher = {
+	'-s': Names_of_system_visted, #NAMES OF SYSTEMS VISITED        
 #	'-p': NAMES OF PLANETS SCANNED
 #	'-t': TOTAL NUMBER OF TERRAFORMABLE PLANETS SCANNED
 #	'-d': TOTAL DISTANCE IN LIGHT YEARS
