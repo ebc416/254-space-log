@@ -13,9 +13,13 @@ try:
 except IndexError:
 	exit("Missing name of log file.")
 except:
-	exit("Couldn't open file \""+sys.argv[1]+"\".")
+	exit("Couldn't open file \""+argv[1]+"\".")
 
+<<<<<<< HEAD
 # Uncomment and your work in the appropriate spots.        
+=======
+# Uncomment, and add your work in the appropriate spots.
+>>>>>>> ebae6177a9bfcac6f1a7cfb355198ae01b57c24f
 argSwitcher = {
 	'-s': planet_list.Names_of_system_visted, #NAMES OF SYSTEMS VISITED        
 #	'-p': NAMES OF PLANETS SCANNED
@@ -29,5 +33,14 @@ try:
 except IndexError:
 	exit("Missing search argument.")
 
+<<<<<<< HEAD
 print(func(content))    
 
+=======
+output = func(content)
+if type(output) is list:
+	for l in output:
+		print(l)
+else:
+	print(output)
+>>>>>>> ebae6177a9bfcac6f1a7cfb355198ae01b57c24f
