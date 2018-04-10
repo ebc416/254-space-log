@@ -1,5 +1,6 @@
 #Eric Minh Hanh Nguyen
-#
+#Yeah, I noticed once I was done, it was eeriely similiar to your own. Took me a lot longer to figure out how to add the numbers together
+#than I'd like to admit.
 import re
 
 def get_total_distance(content):
