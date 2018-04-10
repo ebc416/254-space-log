@@ -6,5 +6,5 @@ def get_total_distance(content):
 	distance = 0
 	if result:
 		for d in result:
-			fuel+=float(d)
+			distance+=float(d)
 	return distance
