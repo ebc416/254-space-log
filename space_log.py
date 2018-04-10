@@ -7,6 +7,7 @@ import fuel
 import planet_list
 import planets_scanned
 import Question3
+import total_distance
 
 # Opens the log file and grabs the contents.
 try:
@@ -23,7 +24,7 @@ argSwitcher = {
 	'-s': planet_list.Names_of_system_visted,
 	'-p': planets_scanned.scanned_planets,
 	'-t': Question3.is_it_terraformable,
-#	'-d': TOTAL DISTANCE IN LIGHT YEARS
+	'-d': total_distance.get_total_distance,
 	'-f': fuel.get_total_fuel,	# The example.
 }
 
