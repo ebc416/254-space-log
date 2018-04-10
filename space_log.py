@@ -24,7 +24,7 @@ argSwitcher = {
 	'-s': planet_list.Names_of_system_visted,
 	'-p': planets_scanned.scanned_planets,
 	'-t': Question3.is_it_terraformable,
-#	'-d': total_distance.get_total_distance,
+	'-d': total_distance.get_total_distance,
 	'-f': fuel.get_total_fuel,	# The example.
 }
 
