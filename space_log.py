@@ -5,6 +5,7 @@
 from sys import argv
 import fuel
 import planet_list
+import planets_scanned
 
 # Opens the log file and grabs the contents.
 try:
@@ -19,7 +20,7 @@ except:
 # Uncomment, and add your work in the appropriate spots.
 argSwitcher = {
 	'-s': planet_list.Names_of_system_visted,
-#	'-p': NAMES OF PLANETS SCANNED
+	'-p': planets_scanned.scanned_planets,
 #	'-t': TOTAL NUMBER OF TERRAFORMABLE PLANETS SCANNED
 #	'-d': TOTAL DISTANCE IN LIGHT YEARS
 	'-f': fuel.get_total_fuel,	# The example.
