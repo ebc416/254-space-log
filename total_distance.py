@@ -1,6 +1,6 @@
 import re
 
-def get_total_fuel(content):
+def get_total_distance(content):
 	pattern = re.compile("\"FuelUsed\":(\d+\.\d+)")
 	result = pattern.findall(content)
 	distance = 0
